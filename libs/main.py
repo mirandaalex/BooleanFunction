@@ -29,15 +29,15 @@ PlaneB.NButton("AND \"*\"",25,60)
 PlaneB.NButton("OR \"+\"",125,60)
 PlaneB.NButton("NOT \"~\"",225,60)
 PlaneB.NButton("<- ",25,120)
-PlaneB.NButton("^",125,120)
-PlaneB.NButton("-> ",225,120)
-PlaneB.NButton("DEL ",25,180)
-PlaneB.NButton("|",125,180)
+PlaneB.NButton("->",125,120)
+PlaneB.NButton("DEL ",225,120)
+#PlaneB.NButton("DEL ",25,180)
+#PlaneB.NButton("|",125,180)
 PlaneB.NButton("DONE",225,180)
 
 
 #INICIA VENTANA
-mainloop()
+root.mainloop()
 
 
 print("Hola Mundo")
