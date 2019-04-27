@@ -1,9 +1,12 @@
 from tkinter import *
 from PIL import Image, ImageTk
-
+from modifiDisplay import *
 #esta es otra clase tkinter.Frame a la cual se le pueden agregar labels, textbot, image, and buttons
 class SectionN(Frame):
-	
+	sbutton=[]
+	stextbox=[]
+	slabel=[]
+	text_string=["|"]
 	def __init__(self,master=None):
 		Frame.__init__(self,master)
 		self.master=master
@@ -40,12 +43,34 @@ class SectionN(Frame):
 		T=Text(self,height=x,width=y)
 		T.place(x=0,y=0)
 		T.insert(END, "Just a text Widget\nin two lines\n")
+		self.stextbox.append(T)
 		return T
-	def NButton(self,text="None",x=0,y=0):
-		b = Button(self,height=2, width=10, text=text)
+	#command llama funciones de la libreria modifiDisplay
+	def NButton(self,z,text="None",x=0,y=0,action=0):
+		if action==0:
+			b = Button(self,height=2, width=10, text=text,command=lambda:AddCharA(text,self.text_string,z))
+		elif action ==1:
+			b = Button(self,height=2, width=10, text=text,command=lambda:DelChar(self.text_string,z))
+		elif action ==2:
+			b = Button(self,height=2, width=10, text=text,command=lambda:MoveD(self.text_string,z))
+		elif action ==3:
+			b = Button(self,height=2, width=10, text=text,command=lambda:MoveI(self.text_string,z))
+		elif action ==4:
+			b = Button(self,height=2, width=10, text=text,command=lambda:AddCharA("*",self.text_string,z))
+		elif action ==5:
+			b = Button(self,height=2, width=10, text=text,command=lambda:AddCharA("+",self.text_string,z))
+		elif action ==6:
+			b = Button(self,height=2, width=10, text=text,command=lambda:AddCharA("~",self.text_string,z))
+		elif action ==7:
+			b = Button(self,height=2, width=10, text=text)
+
+
 		b.place(x=x,y=y)
+		self.sbutton.append(b)
 		return b
+
 	def NLabel(self,textvar="NONE"):
 		label=Label(self,height=7, width=45,background="#A4A4A4",text=textvar)
 		label.pack()
+		self.slabel.append(label)
 		return label
