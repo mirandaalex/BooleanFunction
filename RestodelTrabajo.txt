@@ -1,0 +1,12 @@
+Formas de obtener texto de cualquier elemento (textbox,label,button)
+my_text = my_button.cget('text')
+my_text = my_button['text']
+
+
+Solo falta 
+•operaciones de funciones boolenanas al recibiran una funcion en forma de arrayChar
+•procesaran el array para su operacion
+•crearan sus tablas de verdad 
+•Configuraran el botton done para que cree otra ventana (https://www.youtube.com/watch?v=hky6aQw65lw)
+•Imprima un text() en la otra ventana dejando los espacios necesarios para que paresca tabla 
+ejemplo(https://www.youtube.com/watch?v=2CZqCK4ohYk)
