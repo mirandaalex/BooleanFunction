@@ -1,6 +1,8 @@
 from tkinter import *
 from PIL import Image, ImageTk
 from modifiDisplay import *
+from tablewin import *
+
 #esta es otra clase tkinter.Frame a la cual se le pueden agregar labels, textbot, image, and buttons
 class SectionN(Frame):
 	sbutton=[]
@@ -60,14 +62,19 @@ class SectionN(Frame):
 		elif action ==5:
 			b = Button(self,height=2, width=10, text=text,command=lambda:AddCharA("+",self.text_string,z))
 		elif action ==6:
-			b = Button(self,height=2, width=10, text=text,command=lambda:AddCharA("~",self.text_string,z))
-		elif action ==7:
-			b = Button(self,height=2, width=10, text=text)
+			b = Button(self,height=2, width=10, text=text,command=lambda:AddCharA("~",self.text_string,z))		
 
 
 		b.place(x=x,y=y)
 		self.sbutton.append(b)
 		return b
+
+	def DoneButton(self,root,z,text="None",x=0,y=0):
+		b = Button(self,height=2, width=10, text=text,command=lambda:NewWindow(root))
+		b.place(x=x,y=y)
+		self.sbutton.append(b)
+		return b
+
 
 	def NLabel(self,textvar="NONE"):
 		label=Label(self,height=7, width=45,background="#A4A4A4",text=textvar)

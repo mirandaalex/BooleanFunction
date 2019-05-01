@@ -1,9 +1,4 @@
 #FUNCTION TEXT
-
-
-
-
-
 def AddCharA(char,lista,z):
 	x=0
 	for y in lista[0]:

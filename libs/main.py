@@ -41,7 +41,7 @@ PlaneB.NButton([z],"->",125,120,2)
 PlaneB.NButton([z],"DEL ",225,120,1)
 PlaneB.NButton([z],"D",25,180,0)
 PlaneB.NButton([z],"E",125,180,0)
-PlaneB.NButton([z],"DONE",225,180,7)
+PlaneB.DoneButton(root,[z],"DONE",225,180)
 
 
 #INICIA VENTANA
